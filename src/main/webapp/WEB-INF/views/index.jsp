@@ -9,7 +9,10 @@
 <body>
 <h1>
 MUM eCafe - Your own online foodstore
-</h1><hr>
+</h1>
+<h1>${message}</h1><hr>
+
+
 
 <div align="center">
 <a href="login">Login</a> <a href="register">Register Now</a>

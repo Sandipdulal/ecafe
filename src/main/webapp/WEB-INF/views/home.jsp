@@ -7,8 +7,7 @@
 	<title>E-Cafe Home</title>
 </head>
 <body>
-<h1>
-</h1><hr>
+<h1>${message}</h1>
 
 <div align="center">
 <a href="login">Login</a> <a href="register">Register Now</a>

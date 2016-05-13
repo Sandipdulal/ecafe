@@ -18,6 +18,8 @@
 		<property name="annotatedClasses">
 			<list>
 				<value>com.edu.ecafe.Domain.Product</value>
+				<value>com.edu.ecafe.Domain.Customer</value>
+				<value>com.edu.ecafe.Domain.Address</value>
 			</list>
 		</property>
 	</bean>
@@ -32,7 +34,6 @@
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
 				<prop key="connection.pool.size">1</prop>
 				<prop key="hibernate.show_sql">true</prop>
-				<prop key="hibernate.current_session_context_class">thread</prop>
 			</props>
 		</property>
 	</bean>
@@ -51,6 +52,9 @@
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	
+	<!-- <bean id="customerDAO" class="com.edu.ecafe.DAO.CustomerDAO">
+		<constructor-arg ref="sessionFactory">
+		</constructor-arg>
+	</bean> -->
 </beans>
  

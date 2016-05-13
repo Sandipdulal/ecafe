@@ -1,1 +1,6 @@
-com/edu/ecafe/HomeController.class
+com/edu/ecafe/Controller/CustomerController.class
+com/edu/ecafe/Controller/HomeController.class
+com/edu/ecafe/Domain/Customer.class
+com/edu/ecafe/Domain/Address.class
+com/edu/ecafe/DAO/CustomerDAO.class
+com/edu/ecafe/Domain/Product.class
