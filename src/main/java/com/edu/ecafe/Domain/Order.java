@@ -6,6 +6,8 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -21,6 +23,10 @@ public class Order {
 
 	@Temporal(TemporalType.DATE)
 	private Date date_shipped;
+	
+	@ManyToMany
+	@JoinTable(name="order_product")
+	private List<Product> product;
 
 	//private List<Customer> customers;
 

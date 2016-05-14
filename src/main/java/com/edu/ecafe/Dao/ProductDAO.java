@@ -3,25 +3,24 @@ package com.edu.ecafe.Dao;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import com.edu.ecafe.Dao.IProductDAO;
 import com.edu.ecafe.Domain.Product;
-
 
 // this class for test dealing with product
 public class ProductDAO implements IProductDAO {
-	Collection<Product> productList=new ArrayList<Product>();
-	
-	
+	Collection<Product> productList = new ArrayList<Product>();
+
 	public ProductDAO() {
-		
+
 	}
 
 	public void saveProduct(Product product) {
 		productList.add(product);
-		
+
 	}
 
 	public boolean updateProduct(Product product) {
-		if (getProductById(product.getProductId()) != null){
+		if (getProductById(product.getProductId()) != null) {
 			productList.remove(product);
 			productList.add(product);
 			return true;
@@ -30,7 +29,7 @@ public class ProductDAO implements IProductDAO {
 	}
 
 	public boolean deleteProduct(Product product) {
-		if (getProductById(product.getProductId()) != null){
+		if (getProductById(product.getProductId()) != null) {
 			productList.remove(product);
 			return true;
 		}
@@ -38,8 +37,8 @@ public class ProductDAO implements IProductDAO {
 	}
 
 	public Product getProductById(int id) {
-		for (Product prod : productList){
-			if (prod.getProductId()==id)
+		for (Product prod : productList) {
+			if (prod.getProductId() == id)
 				return prod;
 		}
 		return null;

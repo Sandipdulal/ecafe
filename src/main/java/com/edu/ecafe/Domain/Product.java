@@ -1,4 +1,3 @@
-
 package com.edu.ecafe.Domain;
 
 import javax.persistence.Entity;
@@ -8,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+
+import com.edu.ecafe.Domain.EProductType;
 
 @Entity
 public class Product {
@@ -31,6 +32,10 @@ public class Product {
 		this.productPrice = productPrice;
 	}
 	
+	public Product(String pName, EProductType productType2, byte[] pic2, double price) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getProductId() {
 		return productId;
 	}

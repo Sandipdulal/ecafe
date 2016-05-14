@@ -18,18 +18,18 @@ public class OrderDetails {
 	
 	private int quantity;
 	
-	@OneToMany
-	private List<Order> orders;
+	@OneToOne
+	private Order order;
 	
 	@OneToOne
 	private Product product;
 	
 	private double total_price;
 
-	public OrderDetails(int quantity, List<Order> orders, Product product, double total_price) {
+	public OrderDetails(int quantity, Order orders, Product product, double total_price) {
 		super();
 		this.quantity = quantity;
-		this.orders = orders;
+		this.order = orders;
 		this.product = product;
 		this.total_price = total_price;
 	}
@@ -42,12 +42,12 @@ public class OrderDetails {
 		this.quantity = quantity;
 	}
 
-	public List<Order> getOrders() {
-		return orders;
+	public Order getOrders() {
+		return order;
 	}
 
-	public void setOrders(List<Order> orders) {
-		this.orders = orders;
+	public void setOrders(Order orders) {
+		this.order = orders;
 	}
 
 	public Product getProduct() {

@@ -9,6 +9,8 @@
 <body>
 <h1>${message}</h1>
 
+<h2>Our Menus</h2>
+
 <div align="center">
 <a href="login">Login</a> <a href="register">Register Now</a>
 </div>
