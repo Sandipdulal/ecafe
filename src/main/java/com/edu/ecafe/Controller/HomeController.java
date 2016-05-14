@@ -27,23 +27,8 @@ public class HomeController {
 		
 		return "index";
 	}
-//<<<<<<< HEAD
+
 	
-	@RequestMapping(value="/login",method=RequestMethod.GET)
-	public String login(Model model){
-		
-		return "login";
+
 	}
-//=======
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
-	public String redirectRoot(Locale localTime, Model model) {
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, localTime);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		return "index";
-//>>>>>>> branch 'master' of https://github.com/karkiriks/ecafeProject.git
-	}
-}
+
