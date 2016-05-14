@@ -5,6 +5,9 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class OrderDetails {
@@ -15,8 +18,10 @@ public class OrderDetails {
 	
 	private int quantity;
 	
+	@OneToMany
 	private List<Order> orders;
 	
+	@OneToOne
 	private Product product;
 	
 	private double total_price;

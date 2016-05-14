@@ -22,14 +22,14 @@ public class Order {
 	@Temporal(TemporalType.DATE)
 	private Date date_shipped;
 
-	private List<Customer> customers;
+	//private List<Customer> customers;
 
-	public Order(Date date_created, Date date_shipped, List<Customer> customer) {
+	/*public Order(Date date_created, Date date_shipped, List<Customer> customer) {
 		super();
 		this.date_created = date_created;
 		this.date_shipped = date_shipped;
 		this.customers = customer;
-	}
+	}*/
 
 	public int getOrder_ID() {
 		return order_ID;
@@ -55,12 +55,12 @@ public class Order {
 		this.date_shipped = date_shipped;
 	}
 
-	public List<Customer> getCustomer() {
+	/*public List<Customer> getCustomer() {
 		return customers;
 	}
 
 	public void setCustomer(List<Customer> customer) {
 		this.customers = customer;
-	}
+	}*/
 
 }
