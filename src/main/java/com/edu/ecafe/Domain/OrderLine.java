@@ -5,33 +5,39 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
-public class OrderDetails {
+public class OrderLine {
 
 	@Id
 	@GeneratedValue
-	private int details_id;
+	private int orderline_id;
 	
 	private int quantity;
 	
-	@OneToOne
+	private double sub_total;
+	
+	@ManyToOne
+	@JoinTable(name="order_Id")
 	private Order order;
 	
 	@OneToOne
 	private Product product;
 	
-	private double total_price;
+	
 
-	public OrderDetails(int quantity, Order orders, Product product, double total_price) {
+	public OrderLine(int quantity, Order orders, Product product, double sub_total) {
 		super();
 		this.quantity = quantity;
 		this.order = orders;
 		this.product = product;
-		this.total_price = total_price;
+		this.sub_total = sub_total;
 	}
 
 	public int getQuantity() {
@@ -59,11 +65,11 @@ public class OrderDetails {
 	}
 
 	public double getTotal_price() {
-		return total_price;
+		return sub_total;
 	}
 
 	public void setTotal_price(double total_price) {
-		this.total_price = total_price;
+		this.sub_total = total_price;
 	}
 	
 	
